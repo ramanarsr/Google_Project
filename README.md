@@ -1,13 +1,66 @@
-#ABOUT
-#A RAG pipleine integrated with MCP server to help high school students in science. More subjects can be added into the pipeline easily into the data folder inside the server folder for expansion of the application usage.
-#This model uses LLMs from Grok and is accesed via Grok API. The programming language used is PYTHON (version 3.10.8).
+# 📘 RAG Pipeline with MCP Server for High School Science
 
-#SETUP USING DOCKER:
-#Create a .env file and add a variable "GROQ_API_KEY" with the API key from Grok as its value and save it in the root folder. Now launch Docker desktop, open terminal from the root folder and execute the following command:
+## 📌 About
+
+A **Retrieval-Augmented Generation (RAG) pipeline** integrated with an **MCP (Model Context Protocol) server** to help **high school students** with science-related queries.
+
+This application is easily extensible—additional subjects can be added by placing new data files in the `server/data` folder.
+
+The system uses **Grok LLMs via the Groq API**, with all core logic written in **Python (v3.10.8)**.
+
+---
+
+## 🚀 Setup Using Docker
+
+1. Create a `.env` file in the **root folder**.
+
+2. Add the following environment variable:
+
+   ```env
+   GROQ_API_KEY=your_groq_api_key_here
+   ```
+
+3. Start Docker Desktop.
+
+4. Open a terminal in the **root folder** and run:
+
+   ```bash
+   ```
+
 docker compose up --build
 
-#SETUP WITHOUT DOCKER:
-#Create a .env file and add a variable "GROQ_API_KEY" with the API key from Grok as its value and save it in the root folder. Now open terminal from the root folder and execute the following command:
-pip install requirements.txt
-uvicorn server.main:app --reload
-python -m streamlit run streamlit_app/app.py
+````
+
+---
+
+## 🔧 Setup Without Docker
+1. Create a `.env` file in the **root folder**.
+2. Add the following:
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
+````
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Start the FastAPI server:
+
+   ```bash
+   uvicorn server.main:app --reload
+   ```
+
+5. Launch the Streamlit application:
+
+   ```bash
+   python -m streamlit run streamlit_app/app.py
+   ```
+
+---
+
+## ✅ You're all set!
+
+Your RAG + MCP pipeline should now be running and ready to assist students with science topics.
