@@ -25,21 +25,20 @@ The system uses **Grok LLMs via the Groq API**, with all core logic written in *
 4. Open a terminal in the **root folder** and run:
 
    ```bash
+   docker compose up --build
    ```
-
-docker compose up --build
-
-````
 
 ---
 
 ## 🔧 Setup Without Docker
-1. Create a `.env` file in the **root folder**.
-2. Add the following:
 
-```env
-GROQ_API_KEY=your_groq_api_key_here
-````
+1. Create a `.env` file in the **root folder**.
+
+2. Add the following environment variable:
+
+   ```env
+   GROQ_API_KEY=your_groq_api_key_here
+   ```
 
 3. Install dependencies:
 
